@@ -2,11 +2,11 @@
 // =====================================================
 // رحّال - اتصال قاعدة البيانات
 // =====================================================
-define('DB_HOST', getenv('MYSQL_HOST')     ?: getenv('MYSQLHOST')     ?: 'localhost');
-define('DB_USER', getenv('MYSQL_USER')     ?: getenv('MYSQLUSER')     ?: 'root');
-define('DB_PASS', getenv('MYSQL_PASSWORD') ?: getenv('MYSQLPASSWORD') ?: '');
-define('DB_NAME', getenv('MYSQL_DATABASE') ?: getenv('MYSQLDATABASE') ?: 'rahhal_db');
-define('DB_PORT', (int)(getenv('MYSQL_PORT') ?: getenv('MYSQLPORT') ?: 3306));
+define('DB_HOST', 'mysql.railway.internal');
+define('DB_USER', 'root');
+define('DB_PASS', 'FqUOVLFTEMdZftUQoNkGuPgGGWfvytNR');
+define('DB_NAME', 'rahhal_db');
+define('DB_PORT', 3306);
 
 $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
