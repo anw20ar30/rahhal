@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>التقرير الأكاديمي – منصة رحّال</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--beige:#D8C3A5;--brown:#6B4F3A;--olive:#78866B;--cream:#F7F3ED;--dark:#2F2F2F;--gold:#B08D57;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Tajawal',sans-serif;direction:rtl;color:var(--dark);background:#fff;font-size:14pt;line-height:1.9;}
+.cover{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:linear-gradient(160deg,var(--brown) 0%,#3d2b1e 60%,var(--olive) 100%);color:#fff;padding:60px 40px;page-break-after:always;}
+.cover h1{font-size:3.5rem;font-weight:900;margin-bottom:10px;}
+.cover .tag{font-size:1.2rem;opacity:.8;margin-bottom:40px;}
+.divider{width:100px;height:4px;background:var(--gold);margin:0 auto 40px;border-radius:2px;}
+.cover-info p{font-size:1rem;opacity:.75;margin:4px 0;}
+.body{max-width:850px;margin:0 auto;padding:60px 48px;}
+.ch{page-break-before:always;padding-top:20px;}
+h2.ct{font-size:1.8rem;font-weight:900;color:var(--brown);border-right:5px solid var(--gold);padding-right:18px;margin-bottom:24px;padding-bottom:8px;border-bottom:1px solid var(--beige);}
+h3.st{font-size:1.25rem;font-weight:800;color:var(--brown);margin:24px 0 12px;display:flex;align-items:center;gap:8px;}
+h3.st::before{content:'';display:inline-block;width:10px;height:10px;background:var(--gold);border-radius:50%;}
+p{margin-bottom:14px;}
+ul,ol{padding-right:24px;margin-bottom:16px;}
+li{margin-bottom:6px;}
+table.rt{width:100%;border-collapse:collapse;margin:20px 0;font-size:13pt;}
+.rt th{background:var(--brown);color:#fff;padding:12px 16px;text-align:right;font-weight:700;}
+.rt td{padding:10px 16px;border-bottom:1px solid var(--beige);}
+.rt tr:nth-child(even) td{background:var(--cream);}
+.ib{background:var(--cream);border-right:4px solid var(--gold);border-radius:8px;padding:20px 24px;margin:20px 0;}
+.arch{display:flex;flex-direction:column;gap:0;margin:30px auto;max-width:600px;text-align:center;}
+.al{padding:20px;border-radius:10px;margin:4px 0;font-weight:700;font-size:1rem;}
+.aa{text-align:center;font-size:1.4rem;color:var(--gold);margin:2px 0;}
+.er{background:var(--cream);border:2px solid var(--beige);border-radius:12px;padding:30px;margin:20px 0;}
+.ee{background:var(--brown);color:#fff;border-radius:8px;padding:10px 16px;margin:8px 0;font-weight:700;}
+.ea{background:#fff;border:1px solid var(--beige);border-radius:6px;padding:8px 16px;margin:4px 0 8px 20px;font-size:12pt;}
+.print-btn{position:fixed;bottom:30px;left:30px;background:var(--gold);color:#fff;border:none;border-radius:50px;padding:12px 24px;font-family:'Tajawal',sans-serif;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 20px rgba(176,141,87,.4);z-index:999;}
+@media print{.cover{min-height:auto;height:100vh;}.ch{page-break-before:always;}.print-btn{display:none;}body{font-size:12pt;}}
+</style>
+</head>
+<body>
+
+<!-- الغلاف -->
+<div class="cover">
+    <h1>رحّال</h1>
+    <p class="tag">منصة حجز التجارب الفندقية والإقامات المميزة</p>
+    <div class="divider"></div>
+    <div class="cover-info">
+        <p style="font-size:1.1rem;font-weight:700;color:var(--beige);">التقرير الأكاديمي لمشروع التخرج</p>
+        <p style="margin-top:20px;">المقرر: تطوير تطبيقات الويب</p>
+        <p>الجامعة: ـــــــــــ | الكلية: كلية الحاسب وتقنية المعلومات</p>
+        <p>الفصل الدراسي: الثاني – 1446هـ / 2026م</p>
+        <br><p>إعداد: ـــــ – ـــــ – ـــــ</p>
+        <p>المشرف: د. ـــــ</p>
+    </div>
+</div>
+
+<div class="body">
+
+<!-- جدول المحتويات -->
+<div class="ch">
+<h2 class="ct">جدول المحتويات</h2>
+<ol style="line-height:2.4;">
+<li>شكر وتقدير</li><li>الملخص التنفيذي</li><li>المقدمة</li><li>أهداف المشروع</li>
+<li>نطاق المشروع</li><li>تحليل النظام</li><li>المتطلبات الوظيفية</li>
+<li>المتطلبات غير الوظيفية</li><li>مخطط حالات الاستخدام</li>
+<li>مخطط قاعدة البيانات (ER)</li><li>تصميم قاعدة البيانات</li>
+<li>المعمارية الثلاثية الطبقات</li><li>تصميم الواجهات</li><li>وصف الوحدات</li>
+<li>الاختبار والتحقق</li><li>التحديات والحلول</li>
+<li>التحسينات المستقبلية</li><li>الخاتمة</li><li>المراجع</li>
+</ol>
+</div>
+
+<!-- شكر وتقدير -->
+<div class="ch">
+<h2 class="ct">شكر وتقدير</h2>
+<p>بسم الله الرحمن الرحيم، والصلاة والسلام على أشرف الأنبياء والمرسلين.</p>
+<p>نتقدم بخالص الشكر والامتنان لكل من أسهم في إتمام هذا المشروع. نشكر الله سبحانه وتعالى الذي وفقنا لإتمام هذا العمل، ونشكر أستاذنا المشرف الكريم على توجيهاته القيّمة، وعائلاتنا على دعمهم المعنوي.</p>
+<p>هذا المشروع إسهام متواضع في مسيرة التحول الرقمي لقطاع السياحة والضيافة في المملكة العربية السعودية.</p>
+</div>
+
+<!-- الملخص -->
+<div class="ch">
+<h2 class="ct">الملخص التنفيذي</h2>
+<div class="ib">
+<p>يُقدم هذا التقرير توثيقاً شاملاً لمشروع منصة <strong>رحّال</strong>، وهي منصة ويب عربية متكاملة تم تطويرها باستخدام XAMPP وPHP وMySQL وHTML5 وCSS3 وJavaScript وBootstrap 5.</p>
+<p>تتيح المنصة للمسافرين استكشاف وحجز تجارب إقامة فريدة في أجمل وجهات المملكة العربية السعودية. تتبع المعمارية الثلاثية الطبقات وتوفر 6 وحدات وظيفية متكاملة.</p>
+</div>
+<p><strong>الكلمات المفتاحية:</strong> منصة حجز، تجارب فندقية، PHP، MySQL، عربي RTL، XAMPP، Bootstrap 5.</p>
+</div>
+
+<!-- المقدمة -->
+<div class="ch">
+<h2 class="ct">١. المقدمة</h2>
+<p>في ظل التحول الرقمي المتسارع في المملكة العربية السعودية ضمن مستهدفات رؤية 2030، وتنامي قطاع السياحة الداخلية، باتت الحاجة ماسّة إلى حلول رقمية متطورة تخدم المسافر العربي.</p>
+<p>منصة <strong>رحّال</strong> ليست مجرد موقع حجز فنادق تقليدي، بل هي بوابة رقمية لاكتشاف تجارب إقامة استثنائية تمزج بين الفخامة والأصالة في أجمل وجهات المملكة.</p>
+<h3 class="st">البيئة التقنية</h3>
+<ul>
+<li><strong>PHP (Procedural)</strong>: منطق الأعمال ومعالجة البيانات</li>
+<li><strong>MySQL</strong>: قاعدة بيانات علاقية</li>
+<li><strong>HTML5 / CSS3</strong>: هيكل الصفحات وتنسيقها</li>
+<li><strong>JavaScript</strong>: التفاعلية والتحقق</li>
+<li><strong>Bootstrap 5 RTL</strong>: تصميم متجاوب عربي</li>
+<li><strong>XAMPP</strong>: بيئة التطوير المحلية</li>
+</ul>
+</div>
+
+<!-- الأهداف -->
+<div class="ch">
+<h2 class="ct">٢. أهداف المشروع</h2>
+<ul>
+<li>توفير منصة عربية متكاملة لحجز التجارب الفندقية الاستثنائية.</li>
+<li>تعزيز التحول الرقمي في قطاع السياحة الداخلية بالمملكة العربية السعودية.</li>
+<li>بناء نظام إدارة محتوى متكامل للمشرفين.</li>
+<li>تطبيق معايير الأمان الرقمي والحماية من الثغرات الشائعة.</li>
+<li>تصميم واجهة مستخدم عربية جميلة ومتجاوبة.</li>
+<li>توفير نظام بحث وفلترة متقدم.</li>
+<li>بناء نظام حجز ذكي يحسب التكلفة تلقائياً.</li>
+<li>توثيق المشروع توثيقاً أكاديمياً شاملاً.</li>
+</ul>
+</div>
+
+<!-- المتطلبات -->
+<div class="ch">
+<h2 class="ct">٣. المتطلبات الوظيفية وغير الوظيفية</h2>
+<h3 class="st">المتطلبات الوظيفية</h3>
+<table class="rt">
+<thead><tr><th>#</th><th>المتطلب</th><th>الوصف</th><th>الأولوية</th></tr></thead>
+<tbody>
+<tr><td>FR-01</td><td>تسجيل مستخدم</td><td>إنشاء حساب جديد بالبيانات المطلوبة</td><td>عالية</td></tr>
+<tr><td>FR-02</td><td>تسجيل الدخول</td><td>المصادقة بالبريد وكلمة المرور</td><td>عالية</td></tr>
+<tr><td>FR-03</td><td>استعراض التجارب</td><td>عرض جميع التجارب المتاحة</td><td>عالية</td></tr>
+<tr><td>FR-04</td><td>البحث والفلترة</td><td>تصفية حسب المدينة والفئة والسعر</td><td>عالية</td></tr>
+<tr><td>FR-05</td><td>تفاصيل التجربة</td><td>عرض معلومات كاملة مع التجارب المشابهة</td><td>عالية</td></tr>
+<tr><td>FR-06</td><td>نظام الحجز</td><td>اختيار التواريخ والغرف وتأكيد الحجز</td><td>عالية</td></tr>
+<tr><td>FR-07</td><td>متابعة الحجوزات</td><td>عرض وإلغاء الحجوزات</td><td>متوسطة</td></tr>
+<tr><td>FR-08</td><td>لوحة التحكم</td><td>CRUD كامل للتجارب والحجوزات</td><td>عالية</td></tr>
+<tr><td>FR-09</td><td>رفع الصور</td><td>رفع صور التجارب من لوحة التحكم</td><td>متوسطة</td></tr>
+<tr><td>FR-10</td><td>إدارة الفئات</td><td>إضافة وحذف فئات التجارب</td><td>منخفضة</td></tr>
+</tbody>
+</table>
+<h3 class="st">المتطلبات غير الوظيفية</h3>
+<ul>
+<li><strong>الأمان:</strong> Prepared Statements، تشفير كلمات المرور، Session Management.</li>
+<li><strong>الأداء:</strong> تحميل الصفحات أقل من 3 ثوانٍ.</li>
+<li><strong>التوافق:</strong> Chrome، Firefox، Edge، Safari.</li>
+<li><strong>الاستجابة:</strong> يتكيف مع الحاسب والتابلت والجوال.</li>
+<li><strong>سهولة الاستخدام:</strong> تصميم بديهي باللغة العربية.</li>
+</ul>
+</div>
+
+<!-- Use Case -->
+<div class="ch">
+<h2 class="ct">٤. مخطط حالات الاستخدام (Use Case)</h2>
+<div class="er" style="text-align:center;">
+<h4 style="color:var(--brown);margin-bottom:20px;">نظام رحّال – حالات الاستخدام</h4>
+<div style="display:flex;gap:30px;flex-wrap:wrap;justify-content:center;">
+<div style="flex:1;min-width:220px;">
+<div style="background:var(--beige);border-radius:10px;padding:16px;margin-bottom:8px;font-weight:800;color:var(--brown);">👤 المستخدم</div>
+<?php foreach(['استعراض التجارب','البحث والفلترة','تسجيل حساب','تسجيل الدخول','عرض تفاصيل التجربة','حجز تجربة','عرض حجوزاتي','إلغاء حجز'] as $uc): ?>
+<div style="background:#fff;border:1px solid var(--beige);border-radius:8px;padding:8px 14px;margin:4px 0;font-size:13pt;"><?php echo $uc; ?></div>
+<?php endforeach; ?>
+</div>
+<div style="flex:1;min-width:220px;">
+<div style="background:var(--brown);color:#fff;border-radius:10px;padding:16px;margin-bottom:8px;font-weight:800;">🛡️ المشرف</div>
+<?php foreach(['إدارة التجارب (CRUD)','رفع الصور','عرض الحجوزات','إدارة المستخدمين','إدارة الفئات','عرض الإحصائيات','تسجيل الدخول الإداري'] as $uc): ?>
+<div style="background:#fff;border:1px solid var(--beige);border-radius:8px;padding:8px 14px;margin:4px 0;font-size:13pt;"><?php echo $uc; ?></div>
+<?php endforeach; ?>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ER Diagram -->
+<div class="ch">
+<h2 class="ct">٥. مخطط قاعدة البيانات (ER Diagram)</h2>
+<div class="er">
+<div class="ee">📋 users (المستخدمون)</div>
+<div class="ea">PK: user_id | first_name | last_name | email (UNIQUE) | password | address | mobile | created_at</div>
+<div style="color:var(--olive);font-weight:700;padding:6px 16px;text-align:center;">1 : N (يقوم بـ)</div>
+<div class="ee">📅 bookings (الحجوزات)</div>
+<div class="ea">PK: booking_id | FK: user_id → users | FK: experience_id → experiences | check_in | check_out | rooms | total_price | status | booking_date</div>
+<div style="color:var(--olive);font-weight:700;padding:6px 16px;text-align:center;">N : 1 (يخص)</div>
+<div class="ee">🏨 experiences (التجارب)</div>
+<div class="ea">PK: experience_id | FK: category_id → categories | title | hotel_name | description | city | address | image | price_per_night | rating | available_rooms | is_featured | created_at</div>
+<div style="color:var(--olive);font-weight:700;padding:6px 16px;text-align:center;">N : 1 (تنتمي إلى)</div>
+<div class="ee">🏷️ categories (الفئات)</div>
+<div class="ea">PK: category_id | category_name | category_icon | created_at</div>
+<br>
+<div class="ee" style="background:var(--olive);">🔐 admins (المشرفون)</div>
+<div class="ea">PK: admin_id | username (UNIQUE) | password | created_at</div>
+</div>
+</div>
+
+<!-- تصميم قاعدة البيانات -->
+<div class="ch">
+<h2 class="ct">٦. تصميم قاعدة البيانات</h2>
+<h3 class="st">جدول users</h3>
+<table class="rt"><thead><tr><th>الحقل</th><th>النوع</th><th>القيود</th><th>الوصف</th></tr></thead><tbody>
+<tr><td>user_id</td><td>INT</td><td>PK, AUTO_INCREMENT</td><td>المعرف الفريد</td></tr>
+<tr><td>first_name</td><td>VARCHAR(100)</td><td>NOT NULL</td><td>الاسم الأول</td></tr>
+<tr><td>last_name</td><td>VARCHAR(100)</td><td>NOT NULL</td><td>اسم العائلة</td></tr>
+<tr><td>email</td><td>VARCHAR(255)</td><td>NOT NULL, UNIQUE</td><td>البريد الإلكتروني</td></tr>
+<tr><td>password</td><td>VARCHAR(255)</td><td>NOT NULL</td><td>كلمة المرور (مشفرة)</td></tr>
+<tr><td>address</td><td>VARCHAR(500)</td><td>NULL</td><td>العنوان</td></tr>
+<tr><td>mobile</td><td>VARCHAR(20)</td><td>NULL</td><td>رقم الجوال</td></tr>
+<tr><td>created_at</td><td>TIMESTAMP</td><td>DEFAULT NOW()</td><td>تاريخ التسجيل</td></tr>
+</tbody></table>
+
+<h3 class="st">جدول bookings</h3>
+<table class="rt"><thead><tr><th>الحقل</th><th>النوع</th><th>الوصف</th></tr></thead><tbody>
+<tr><td>booking_id</td><td>INT PK</td><td>معرف الحجز</td></tr>
+<tr><td>user_id</td><td>INT FK → users</td><td>المستخدم الحاجز</td></tr>
+<tr><td>experience_id</td><td>INT FK → experiences</td><td>التجربة المحجوزة</td></tr>
+<tr><td>check_in</td><td>DATE</td><td>تاريخ الوصول</td></tr>
+<tr><td>check_out</td><td>DATE</td><td>تاريخ المغادرة</td></tr>
+<tr><td>rooms</td><td>INT</td><td>عدد الغرف</td></tr>
+<tr><td>total_price</td><td>DECIMAL(12,2)</td><td>التكلفة الإجمالية</td></tr>
+<tr><td>status</td><td>ENUM</td><td>confirmed / cancelled / pending</td></tr>
+</tbody></table>
+</div>
+
+<!-- المعمارية -->
+<div class="ch">
+<h2 class="ct">٧. معمارية النظام الثلاثية الطبقات</h2>
+<p>يتبع مشروع رحّال نمط المعمارية الثلاثية الطبقات (3-Tier Architecture):</p>
+<div class="arch">
+    <div class="al" style="background:var(--beige);color:var(--dark);">🖥️ طبقة العرض (Presentation Layer)<br><small style="font-weight:400;">HTML5 · CSS3 · JavaScript · Bootstrap 5 RTL</small></div>
+    <div class="aa">⬆️ HTTP ⬇️</div>
+    <div class="al" style="background:var(--brown);color:#fff;">⚙️ طبقة منطق الأعمال (Business Layer)<br><small style="font-weight:400;">PHP Procedural · Sessions · Includes</small></div>
+    <div class="aa">⬆️ SQL ⬇️</div>
+    <div class="al" style="background:var(--olive);color:#fff;">🗄️ طبقة البيانات (Data Layer)<br><small style="font-weight:400;">MySQL · Prepared Statements · UTF8MB4</small></div>
+</div>
+<h3 class="st">مزايا هذه المعمارية</h3>
+<ul>
+<li>الفصل الواضح بين طبقات النظام</li>
+<li>سهولة الصيانة والتطوير</li>
+<li>قابلية التوسعة والتعديل</li>
+<li>الأمان عبر طبقة PHP كحاجز حماية</li>
+<li>إعادة الاستخدام عبر PHP Includes</li>
+</ul>
+</div>
+
+<!-- الاختبار -->
+<div class="ch">
+<h2 class="ct">٨. الاختبار والتحقق</h2>
+<table class="rt">
+<thead><tr><th>#</th><th>حالة الاختبار</th><th>النتيجة المتوقعة</th><th>الحالة</th></tr></thead>
+<tbody>
+<tr><td>T-01</td><td>تسجيل مستخدم جديد بيانات صحيحة</td><td>إنشاء حساب والتحويل للرئيسية</td><td style="color:#27ae60;font-weight:700;">✓ نجح</td></tr>
+<tr><td>T-02</td><td>تسجيل ببريد مكرر</td><td>رسالة خطأ توضيحية بالعربية</td><td style="color:#27ae60;font-weight:700;">✓ نجح</td></tr>
+<tr><td>T-03</td><td>تسجيل الدخول بيانات صحيحة</td><td>تسجيل دخول ناجح</td><td style="color:#27ae60;font-weight:700;">✓ نجح</td></tr>
+<tr><td>T-04</td><td>تسجيل دخول بكلمة مرور خاطئة</td><td>رسالة خطأ عربية</td><td style="color:#27ae60;font-weight:700;">✓ نجح</td></tr>
+<tr><td>T-05</td><td>البحث والفلترة</td><td>عرض النتائج المناسبة</td><td style="color:#27ae60;font-weight:700;">✓ نجح</td></tr>
+<tr><td>T-06</td><td>الحجز مع حساب صحيح</td><td>رسالة نجاح ورقم حجز</td><td style="color:#27ae60;font-weight:700;">✓ نجح</td></tr>
+<tr><td>T-07</td><td>الحجز بدون تسجيل</td><td>التحويل لصفحة الدخول</td><td style="color:#27ae60;font-weight:700;">✓ نجح</td></tr>
+<tr><td>T-08</td><td>إلغاء الحجز</td><td>تغيير الحالة إلى ملغى</td><td style="color:#27ae60;font-weight:700;">✓ نجح</td></tr>
+<tr><td>T-09</td><td>SQL Injection</td><td>النظام محمي - لا يتأثر</td><td style="color:#27ae60;font-weight:700;">✓ محمي</td></tr>
+<tr><td>T-10</td><td>التجاوب مع الجوال</td><td>تصميم متجاوب كامل</td><td style="color:#27ae60;font-weight:700;">✓ نجح</td></tr>
+<tr><td>T-11</td><td>حساب التكلفة التلقائي</td><td>حساب صحيح فوري</td><td style="color:#27ae60;font-weight:700;">✓ نجح</td></tr>
+<tr><td>T-12</td><td>إضافة تجربة من لوحة التحكم</td><td>إضافة ناجحة مع رفع صورة</td><td style="color:#27ae60;font-weight:700;">✓ نجح</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- التحديات -->
+<div class="ch">
+<h2 class="ct">٩. التحديات والحلول</h2>
+<table class="rt">
+<thead><tr><th>التحدي</th><th>الوصف</th><th>الحل المطبق</th></tr></thead>
+<tbody>
+<tr><td>دعم RTL والعربية</td><td>توافق Bootstrap 5 مع الاتجاه العربي</td><td>Bootstrap RTL + dir="rtl" + خط Tajawal</td></tr>
+<tr><td>الحساب الديناميكي</td><td>تحديث الإجمالي فورياً</td><td>JavaScript EventListeners</td></tr>
+<tr><td>الحماية من SQL Injection</td><td>أمان قاعدة البيانات</td><td>Prepared Statements في جميع الاستعلامات</td></tr>
+<tr><td>التحقق الثنائي</td><td>ضمان صحة البيانات</td><td>JavaScript + PHP من جانبين</td></tr>
+<tr><td>رفع الصور بأمان</td><td>منع رفع ملفات خطرة</td><td>التحقق من الامتداد والحجم + تغيير الاسم</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- التحسينات المستقبلية -->
+<div class="ch">
+<h2 class="ct">١٠. التحسينات المستقبلية</h2>
+<ul>
+<li>دمج بوابة دفع إلكتروني (مدى، Visa، Apple Pay)</li>
+<li>تطبيق جوال (React Native أو Flutter)</li>
+<li>نظام التقييم والمراجعات</li>
+<li>إشعارات البريد الإلكتروني التلقائية</li>
+<li>ميزة المفضلة وقائمة الرغبات</li>
+<li>ذكاء اصطناعي لاقتراح التجارب</li>
+<li>دعم متعدد اللغات (عربي/إنجليزي)</li>
+<li>الترقية إلى Laravel Framework</li>
+<li>تكامل مع خرائط جوجل</li>
+</ul>
+</div>
+
+<!-- الخاتمة -->
+<div class="ch">
+<h2 class="ct">١١. الخاتمة</h2>
+<p>يمثل مشروع منصة <strong>رحّال</strong> تطبيقاً عملياً متكاملاً يجمع بين متطلبات برمجة الويب الحديثة وتصميم تجربة المستخدم وتطبيق معايير الأمان الرقمي.</p>
+<p>تجمع المنصة بين التراث العربي الأصيل والتكنولوجيا الحديثة في تجربة رقمية تفخر بهويتها العربية.</p>
+<div class="ib"><p style="text-align:center;font-size:1.2rem;font-weight:800;color:var(--brown);">"رحّال... أكثر من مجرد حجز فندق"</p><p style="text-align:center;opacity:.75;">اكتشف تجارب إقامة استثنائية في أجمل الوجهات</p></div>
+</div>
+
+<!-- المراجع -->
+<div class="ch">
+<h2 class="ct">١٢. المراجع</h2>
+<ol>
+<li>PHP Manual. (2024). PHP: Hypertext Preprocessor Documentation. php.net</li>
+<li>MySQL Documentation. (2024). MySQL 8.0 Reference Manual. dev.mysql.com</li>
+<li>Bootstrap Team. (2023). Bootstrap 5 RTL Documentation. getbootstrap.com</li>
+<li>OWASP Foundation. (2024). OWASP Top Ten Security Risks. owasp.org</li>
+<li>MDN Web Docs. (2024). JavaScript Reference. developer.mozilla.org</li>
+<li>Google Fonts. (2024). Tajawal Arabic Font. fonts.google.com</li>
+<li>رؤية المملكة 2030. (2024). أهداف قطاع السياحة. vision2030.gov.sa</li>
+</ol>
+</div>
+
+</div>
+
+<button class="print-btn" onclick="window.print()">🖨️ طباعة / PDF</button>
+</body>
+</html>

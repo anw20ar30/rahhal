@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>عرض تقديمي – رحّال</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{--beige:#D8C3A5;--brown:#6B4F3A;--olive:#78866B;--cream:#F7F3ED;--dark:#2F2F2F;--gold:#B08D57;--gold-l:#C9A96E;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Tajawal',sans-serif;direction:rtl;background:#1a1a1a;color:#fff;overflow:hidden;height:100vh;}
+.slide{display:none;width:100vw;height:100vh;padding:60px 80px;position:relative;flex-direction:column;justify-content:center;align-items:flex-start;overflow:hidden;}
+.slide.active{display:flex;}
+.bg-dark{background:linear-gradient(135deg,#2f1e12 0%,#3d2b1e 60%,var(--olive) 100%);}
+.bg-light{background:var(--cream);color:var(--dark);}
+.bg-brown{background:linear-gradient(135deg,var(--brown),#2f1e12);}
+.bg-olive{background:linear-gradient(135deg,var(--olive),#3d4e37);}
+.bg-gold{background:linear-gradient(135deg,var(--gold),#8B6914);}
+.tag{display:inline-block;background:rgba(176,141,87,.25);border:1px solid rgba(176,141,87,.5);color:var(--gold-l);padding:5px 18px;border-radius:30px;font-size:.85rem;font-weight:700;margin-bottom:20px;}
+.slide h1{font-size:clamp(2.2rem,5vw,4.2rem);font-weight:900;line-height:1.15;margin-bottom:16px;}
+.slide h2{font-size:clamp(1.8rem,4vw,3rem);font-weight:900;line-height:1.2;margin-bottom:14px;}
+.slide p{font-size:1rem;line-height:1.8;opacity:.85;max-width:700px;margin-bottom:12px;}
+.gold{color:var(--gold-l);}
+.dv{width:80px;height:4px;background:var(--gold);border-radius:2px;margin:16px 0 24px;}
+.cgrid{display:grid;gap:20px;width:100%;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:20px;}
+.cc{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:22px 20px;}
+.cc.lt{background:#fff;border-color:var(--beige);color:var(--dark);}
+.cc i{font-size:1.8rem;color:var(--gold-l);margin-bottom:12px;display:block;}
+.cc h4{font-size:.95rem;font-weight:800;margin-bottom:6px;}
+.cc p{font-size:.82rem;opacity:.7;margin:0;}
+.al{list-style:none;margin-top:10px;width:100%;}
+.al li{display:flex;align-items:center;gap:14px;padding:14px 20px;border-radius:10px;margin-bottom:8px;font-weight:700;font-size:1rem;}
+.al li:nth-child(1){background:rgba(216,195,165,.15);}
+.al li:nth-child(2){background:rgba(107,79,58,.25);}
+.al li:nth-child(3){background:rgba(120,134,107,.2);}
+.sn{position:absolute;bottom:30px;left:50px;font-size:13px;opacity:.5;}
+.sl{position:absolute;top:28px;left:60px;font-size:1.1rem;font-weight:900;color:rgba(255,255,255,.4);}
+.nav-c{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:14px;z-index:100;}
+.nb{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:50px;padding:10px 22px;cursor:pointer;font-family:'Tajawal',sans-serif;font-size:14px;font-weight:700;transition:all .2s;}
+.nb:hover{background:var(--gold);border-color:var(--gold);}
+.sc{color:rgba(255,255,255,.6);font-size:13px;min-width:70px;text-align:center;}
+.pb{position:fixed;top:0;right:0;height:3px;background:var(--gold);transition:width .3s;z-index:200;}
+.dc{position:absolute;border-radius:50%;background:rgba(176,141,87,.06);pointer-events:none;}
+</style>
+</head>
+<body>
+<div class="pb" id="pb"></div>
+
+<!-- 1: الغلاف -->
+<div class="slide bg-dark active">
+    <div class="dc" style="width:500px;height:500px;top:-200px;left:-150px;"></div>
+    <div class="tag"><i class="fas fa-star ms-1"></i>مشروع تخرج – 1446هـ / 2026م</div>
+    <h1 style="font-size:5rem;">رحّال</h1>
+    <div class="dv"></div>
+    <p style="font-size:1.2rem;opacity:.9;max-width:600px;">منصة حجز التجارب الفندقية والإقامات المميزة</p>
+    <p>رحّال... أكثر من مجرد حجز فندق</p>
+    <div class="sn">1 / 14</div>
+</div>
+
+<!-- 2: الفريق -->
+<div class="slide bg-brown">
+    <div class="sl">رحّال</div>
+    <div class="tag"><i class="fas fa-users ms-1"></i>فريق العمل</div>
+    <h2>أعضاء الفريق</h2><div class="dv"></div>
+    <div style="display:flex;gap:24px;flex-wrap:wrap;margin-top:24px;">
+        <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:24px 28px;text-align:center;min-width:160px;"><div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--brown));display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:900;margin:0 auto 12px;">أ</div><div style="font-weight:800;">ـــــ</div><div style="font-size:.8rem;opacity:.6;">مطور الواجهة</div></div>
+        <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:24px 28px;text-align:center;min-width:160px;"><div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--brown));display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:900;margin:0 auto 12px;">م</div><div style="font-weight:800;">ـــــ</div><div style="font-size:.8rem;opacity:.6;">مطور الخلفية</div></div>
+        <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:24px 28px;text-align:center;min-width:160px;"><div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--brown));display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:900;margin:0 auto 12px;">س</div><div style="font-weight:800;">ـــــ</div><div style="font-size:.8rem;opacity:.6;">مصمم UI/UX</div></div>
+    </div>
+    <p style="margin-top:24px;opacity:.6;">المشرف: د. ـــــ | الجامعة: ـــــ</p>
+    <div class="sn">2 / 14</div>
+</div>
+
+<!-- 3: المقدمة -->
+<div class="slide bg-light">
+    <div class="tag" style="background:rgba(176,141,87,.1);border-color:rgba(176,141,87,.3);color:var(--gold);"><i class="fas fa-info-circle ms-1"></i>عن المشروع</div>
+    <h2 style="color:var(--brown);">ما هي منصة رحّال؟</h2><div class="dv"></div>
+    <p style="color:var(--dark);font-size:1.1rem;max-width:750px;">منصة رحّال ليست موقع حجز فنادق عادياً — إنها تجربة اكتشاف كاملة للإقامات الاستثنائية في أجمل وجهات المملكة العربية السعودية.</p>
+    <div class="cgrid" style="grid-template-columns:repeat(3,1fr);margin-top:24px;">
+        <div class="cc lt"><i class="fas fa-crown"></i><h4>منتجعات فاخرة</h4><p>تجارب راقية بخدمات 5 نجوم</p></div>
+        <div class="cc lt"><i class="fas fa-landmark"></i><h4>فنادق تراثية</h4><p>استكشف الحضارة والأصالة</p></div>
+        <div class="cc lt"><i class="fas fa-campground"></i><h4>مخيمات صحراوية</h4><p>ليالٍ تحت النجوم</p></div>
+    </div>
+    <div class="sn" style="color:var(--dark);opacity:.4;">3 / 14</div>
+</div>
+
+<!-- 4: الأهداف -->
+<div class="slide bg-dark">
+    <div class="sl">رحّال</div>
+    <div class="tag"><i class="fas fa-bullseye ms-1"></i>الأهداف</div>
+    <h2>أهداف المشروع</h2><div class="dv"></div>
+    <div class="cgrid" style="grid-template-columns:repeat(2,1fr);">
+        <div class="cc"><i class="fas fa-globe-asia"></i><h4>تعزيز السياحة الرقمية</h4><p>دعم رؤية 2030</p></div>
+        <div class="cc"><i class="fas fa-users"></i><h4>تجربة مستخدم عربية</h4><p>واجهة RTL احترافية</p></div>
+        <div class="cc"><i class="fas fa-shield-alt"></i><h4>أمان رقمي عالٍ</h4><p>Prepared Statements وتشفير</p></div>
+        <div class="cc"><i class="fas fa-mobile-alt"></i><h4>تصميم متجاوب</h4><p>يعمل على جميع الأجهزة</p></div>
+    </div>
+    <div class="sn">4 / 14</div>
+</div>
+
+<!-- 5: المعمارية -->
+<div class="slide bg-olive">
+    <div class="sl">رحّال</div>
+    <div class="tag"><i class="fas fa-layer-group ms-1"></i>البنية التقنية</div>
+    <h2>معمارية ثلاثية الطبقات</h2><div class="dv"></div>
+    <ul class="al">
+        <li><i class="fas fa-desktop" style="color:var(--beige);font-size:1.4rem;width:30px;"></i><div><div>طبقة العرض</div><div style="font-size:.82rem;opacity:.7;font-weight:400;">HTML5 · CSS3 · JavaScript · Bootstrap 5 RTL</div></div></li>
+        <li><i class="fas fa-cogs" style="color:var(--gold-l);font-size:1.4rem;width:30px;"></i><div><div>طبقة منطق الأعمال</div><div style="font-size:.82rem;opacity:.7;font-weight:400;">PHP Procedural · Sessions · Includes</div></div></li>
+        <li><i class="fas fa-database" style="color:var(--beige);font-size:1.4rem;width:30px;"></i><div><div>طبقة البيانات</div><div style="font-size:.82rem;opacity:.7;font-weight:400;">MySQL · Prepared Statements · UTF8MB4</div></div></li>
+    </ul>
+    <div class="sn">5 / 14</div>
+</div>
+
+<!-- 6: قاعدة البيانات -->
+<div class="slide bg-brown">
+    <div class="sl">رحّال</div>
+    <div class="tag"><i class="fas fa-database ms-1"></i>قاعدة البيانات</div>
+    <h2>تصميم قاعدة البيانات</h2><div class="dv"></div>
+    <div class="cgrid" style="grid-template-columns:repeat(5,1fr);">
+        <div class="cc" style="text-align:center;"><i class="fas fa-users" style="font-size:1.4rem;"></i><h4>users</h4><p style="font-size:.75rem;">المستخدمون</p></div>
+        <div class="cc" style="text-align:center;"><i class="fas fa-hotel" style="font-size:1.4rem;"></i><h4>experiences</h4><p style="font-size:.75rem;">التجارب</p></div>
+        <div class="cc" style="text-align:center;"><i class="fas fa-tags" style="font-size:1.4rem;"></i><h4>categories</h4><p style="font-size:.75rem;">الفئات</p></div>
+        <div class="cc" style="text-align:center;"><i class="fas fa-calendar-check" style="font-size:1.4rem;"></i><h4>bookings</h4><p style="font-size:.75rem;">الحجوزات</p></div>
+        <div class="cc" style="text-align:center;"><i class="fas fa-shield-alt" style="font-size:1.4rem;"></i><h4>admins</h4><p style="font-size:.75rem;">المشرفون</p></div>
+    </div>
+    <p style="margin-top:16px;opacity:.7;">العلاقات: users 1:N bookings · experiences 1:N bookings · categories 1:N experiences</p>
+    <div class="sn">6 / 14</div>
+</div>
+
+<!-- 7: ER -->
+<div class="slide bg-dark">
+    <div class="sl">رحّال</div>
+    <div class="tag"><i class="fas fa-project-diagram ms-1"></i>ER Diagram</div>
+    <h2>مخطط العلاقات</h2><div class="dv"></div>
+    <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:10px;">
+        <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:14px 20px;text-align:center;"><div style="font-weight:800;color:var(--gold-l);margin-bottom:6px;">categories</div><div style="font-size:.75rem;opacity:.6;">category_id (PK)<br>category_name</div></div>
+        <div style="font-size:1.5rem;color:var(--gold);">1:N →</div>
+        <div style="background:rgba(107,79,58,.3);border:1px solid rgba(176,141,87,.3);border-radius:10px;padding:14px 20px;text-align:center;"><div style="font-weight:800;color:var(--gold-l);margin-bottom:6px;">experiences</div><div style="font-size:.75rem;opacity:.6;">experience_id (PK)<br>category_id (FK)<br>title, city, price</div></div>
+        <div style="font-size:1.5rem;color:var(--gold);">1:N →</div>
+        <div style="background:rgba(120,134,107,.2);border:1px solid rgba(120,134,107,.3);border-radius:10px;padding:14px 20px;text-align:center;"><div style="font-weight:800;color:var(--gold-l);margin-bottom:6px;">bookings</div><div style="font-size:.75rem;opacity:.6;">booking_id (PK)<br>user_id (FK)<br>experience_id (FK)</div></div>
+        <div style="font-size:1.5rem;color:var(--gold);">← N:1</div>
+        <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:14px 20px;text-align:center;"><div style="font-weight:800;color:var(--gold-l);margin-bottom:6px;">users</div><div style="font-size:.75rem;opacity:.6;">user_id (PK)<br>email, password</div></div>
+    </div>
+    <div class="sn">7 / 14</div>
+</div>
+
+<!-- 8: الواجهات -->
+<div class="slide bg-light">
+    <div class="tag" style="background:rgba(176,141,87,.1);border-color:rgba(176,141,87,.3);color:var(--gold);"><i class="fas fa-desktop ms-1"></i>الواجهات</div>
+    <h2 style="color:var(--brown);">الواجهات الرئيسية</h2><div class="dv"></div>
+    <div class="cgrid" style="grid-template-columns:repeat(4,1fr);">
+        <div class="cc lt" style="text-align:center;"><i class="fas fa-home" style="color:var(--brown);"></i><h4 style="color:var(--brown);">الرئيسية</h4><p>Hero · فئات · مميزة</p></div>
+        <div class="cc lt" style="text-align:center;"><i class="fas fa-compass" style="color:var(--brown);"></i><h4 style="color:var(--brown);">التجارب</h4><p>بحث · فلترة · ترتيب</p></div>
+        <div class="cc lt" style="text-align:center;"><i class="fas fa-hotel" style="color:var(--brown);"></i><h4 style="color:var(--brown);">تفاصيل</h4><p>صور · معلومات · حجز</p></div>
+        <div class="cc lt" style="text-align:center;"><i class="fas fa-calendar-check" style="color:var(--brown);"></i><h4 style="color:var(--brown);">حجوزاتي</h4><p>متابعة · إلغاء</p></div>
+    </div>
+    <div class="sn" style="color:var(--dark);opacity:.4;">8 / 14</div>
+</div>
+
+<!-- 9: الوحدات -->
+<div class="slide bg-gold">
+    <div class="sl">رحّال</div>
+    <div class="tag" style="background:rgba(0,0,0,.15);border-color:rgba(0,0,0,.2);color:#fff;"><i class="fas fa-cubes ms-1"></i>الوحدات</div>
+    <h2>الوحدات الوظيفية</h2><div class="dv" style="background:rgba(255,255,255,.5);"></div>
+    <div class="cgrid" style="grid-template-columns:repeat(3,1fr);">
+        <div class="cc" style="background:rgba(0,0,0,.15);border-color:rgba(0,0,0,.2);"><i class="fas fa-user-plus"></i><h4>إدارة المستخدمين</h4><p>تسجيل · دخول · جلسات</p></div>
+        <div class="cc" style="background:rgba(0,0,0,.15);border-color:rgba(0,0,0,.2);"><i class="fas fa-search"></i><h4>البحث والتصفح</h4><p>نص · فئة · مدينة · ترتيب</p></div>
+        <div class="cc" style="background:rgba(0,0,0,.15);border-color:rgba(0,0,0,.2);"><i class="fas fa-calendar-alt"></i><h4>نظام الحجز</h4><p>تواريخ · غرف · حساب تلقائي</p></div>
+        <div class="cc" style="background:rgba(0,0,0,.15);border-color:rgba(0,0,0,.2);"><i class="fas fa-tachometer-alt"></i><h4>لوحة التحكم</h4><p>CRUD · إحصائيات · رفع صور</p></div>
+        <div class="cc" style="background:rgba(0,0,0,.15);border-color:rgba(0,0,0,.2);"><i class="fas fa-check-double"></i><h4>التحقق الثنائي</h4><p>JavaScript + PHP</p></div>
+        <div class="cc" style="background:rgba(0,0,0,.15);border-color:rgba(0,0,0,.2);"><i class="fas fa-lock"></i><h4>الأمان</h4><p>Prepared Statements · Hashing</p></div>
+    </div>
+    <div class="sn">9 / 14</div>
+</div>
+
+<!-- 10: التقنيات -->
+<div class="slide bg-brown">
+    <div class="sl">رحّال</div>
+    <div class="tag"><i class="fas fa-code ms-1"></i>التقنيات</div>
+    <h2>التقنيات المستخدمة</h2><div class="dv"></div>
+    <div class="cgrid" style="grid-template-columns:repeat(4,1fr);">
+        <div class="cc" style="text-align:center;"><i class="fab fa-php" style="font-size:2.2rem;"></i><h4>PHP</h4><p>Procedural · Sessions</p></div>
+        <div class="cc" style="text-align:center;"><i class="fas fa-database" style="font-size:2.2rem;"></i><h4>MySQL</h4><p>5 جداول · UTF8MB4</p></div>
+        <div class="cc" style="text-align:center;"><i class="fab fa-bootstrap" style="font-size:2.2rem;"></i><h4>Bootstrap 5</h4><p>RTL · Responsive</p></div>
+        <div class="cc" style="text-align:center;"><i class="fab fa-js-square" style="font-size:2.2rem;"></i><h4>JavaScript</h4><p>Validation · Calculations</p></div>
+    </div>
+    <p style="margin-top:16px;opacity:.7;"><i class="fas fa-plus ms-2 text-gold"></i>XAMPP · Font Awesome · Tajawal · Bootstrap RTL</p>
+    <div class="sn">10 / 14</div>
+</div>
+
+<!-- 11: شاشات -->
+<div class="slide bg-dark">
+    <div class="sl">رحّال</div>
+    <div class="tag"><i class="fas fa-images ms-1"></i>نماذج الشاشات</div>
+    <h2>نماذج من الموقع</h2><div class="dv"></div>
+    <div class="cgrid" style="grid-template-columns:repeat(3,1fr);">
+        <div class="cc" style="text-align:center;"><i class="fas fa-home" style="font-size:2rem;margin-bottom:10px;"></i><h4>الصفحة الرئيسية</h4><p style="font-size:.8rem;">Hero · Search · Featured</p></div>
+        <div class="cc" style="text-align:center;"><i class="fas fa-filter" style="font-size:2rem;margin-bottom:10px;"></i><h4>التجارب</h4><p style="font-size:.8rem;">Filters · Cards · Pagination</p></div>
+        <div class="cc" style="text-align:center;"><i class="fas fa-calendar-check" style="font-size:2rem;margin-bottom:10px;"></i><h4>الحجز</h4><p style="font-size:.8rem;">Dates · Auto-Calculate</p></div>
+    </div>
+    <div style="margin-top:16px;padding:14px 20px;background:rgba(176,141,87,.12);border:1px solid rgba(176,141,87,.2);border-radius:10px;">
+        <span style="font-size:.9rem;opacity:.8;"><i class="fas fa-link ms-2 text-gold"></i>الرابط: <code style="color:var(--gold-l);">http://localhost/rahhal/</code> &nbsp;|&nbsp; الإدارة: <code style="color:var(--gold-l);">http://localhost/rahhal/admin/</code></span>
+    </div>
+    <div class="sn">11 / 14</div>
+</div>
+
+<!-- 12: التحديات -->
+<div class="slide bg-olive">
+    <div class="sl">رحّال</div>
+    <div class="tag"><i class="fas fa-exclamation-triangle ms-1"></i>التحديات</div>
+    <h2>التحديات والحلول</h2><div class="dv"></div>
+    <div class="cgrid" style="grid-template-columns:repeat(2,1fr);">
+        <div class="cc"><i class="fas fa-language"></i><h4>دعم RTL والعربية</h4><p>الحل: Bootstrap RTL + CSS dir=rtl + خط Tajawal</p></div>
+        <div class="cc"><i class="fas fa-calculator"></i><h4>حساب التكلفة الفوري</h4><p>الحل: JavaScript EventListeners</p></div>
+        <div class="cc"><i class="fas fa-shield-virus"></i><h4>الحماية من SQL Injection</h4><p>الحل: Prepared Statements</p></div>
+        <div class="cc"><i class="fas fa-upload"></i><h4>رفع الصور بأمان</h4><p>الحل: التحقق من الامتداد والحجم</p></div>
+    </div>
+    <div class="sn">12 / 14</div>
+</div>
+
+<!-- 13: الخاتمة -->
+<div class="slide bg-dark">
+    <div class="sl">رحّال</div>
+    <div class="tag"><i class="fas fa-flag-checkered ms-1"></i>الخاتمة</div>
+    <h2>الخاتمة والمستقبل</h2><div class="dv"></div>
+    <div style="display:flex;gap:40px;width:100%;">
+        <div style="flex:1;"><h3 style="color:var(--gold-l);margin-bottom:14px;">ما تم إنجازه</h3>
+            <ul style="list-style:none;">
+                <li style="margin-bottom:8px;"><i class="fas fa-check-circle text-gold ms-2"></i>منصة ويب عربية كاملة</li>
+                <li style="margin-bottom:8px;"><i class="fas fa-check-circle text-gold ms-2"></i>5 جداول قاعدة بيانات</li>
+                <li style="margin-bottom:8px;"><i class="fas fa-check-circle text-gold ms-2"></i>6 وحدات وظيفية</li>
+                <li style="margin-bottom:8px;"><i class="fas fa-check-circle text-gold ms-2"></i>لوحة تحكم إدارية</li>
+                <li style="margin-bottom:8px;"><i class="fas fa-check-circle text-gold ms-2"></i>تصميم متجاوب 100%</li>
+                <li style="margin-bottom:8px;"><i class="fas fa-check-circle text-gold ms-2"></i>أمان رقمي متكامل</li>
+            </ul>
+        </div>
+        <div style="flex:1;"><h3 style="color:var(--gold-l);margin-bottom:14px;">التطوير المستقبلي</h3>
+            <ul style="list-style:none;">
+                <li style="margin-bottom:8px;"><i class="fas fa-rocket text-gold ms-2"></i>بوابة دفع إلكتروني</li>
+                <li style="margin-bottom:8px;"><i class="fas fa-rocket text-gold ms-2"></i>تطبيق جوال</li>
+                <li style="margin-bottom:8px;"><i class="fas fa-rocket text-gold ms-2"></i>نظام تقييم ومراجعات</li>
+                <li style="margin-bottom:8px;"><i class="fas fa-rocket text-gold ms-2"></i>ذكاء اصطناعي</li>
+                <li style="margin-bottom:8px;"><i class="fas fa-rocket text-gold ms-2"></i>ترقية إلى Laravel</li>
+            </ul>
+        </div>
+    </div>
+    <div class="sn">13 / 14</div>
+</div>
+
+<!-- 14: شكراً -->
+<div class="slide bg-brown">
+    <div class="dc" style="width:600px;height:600px;top:-250px;left:-200px;"></div>
+    <div style="text-align:center;width:100%;">
+        <div class="tag" style="margin:0 auto 20px;"><i class="fas fa-heart ms-1"></i>شكراً جزيلاً</div>
+        <h1 style="font-size:4.5rem;margin-bottom:16px;">شكراً لاهتمامكم</h1>
+        <div class="dv" style="margin:20px auto;"></div>
+        <p style="font-size:1.3rem;text-align:center;max-width:600px;margin:0 auto 30px;">"رحّال... أكثر من مجرد حجز فندق"</p>
+        <p style="font-size:1rem;opacity:.7;text-align:center;">اكتشف تجارب إقامة استثنائية في أجمل الوجهات</p>
+        <div style="margin-top:40px;display:flex;gap:20px;justify-content:center;flex-wrap:wrap;">
+            <span style="opacity:.6;font-size:.9rem;"><i class="fas fa-globe ms-1"></i>localhost/rahhal</span>
+            <span style="opacity:.6;font-size:.9rem;"><i class="fas fa-envelope ms-1"></i>info@rahhal.sa</span>
+        </div>
+    </div>
+    <div class="sn">14 / 14</div>
+</div>
+
+<!-- التنقل -->
+<div class="nav-c">
+    <button class="nb" onclick="cs(-1)"><i class="fas fa-chevron-right ms-1"></i>السابق</button>
+    <span class="sc" id="sc">1 / 14</span>
+    <button class="nb" onclick="cs(1)">التالي <i class="fas fa-chevron-left ms-1"></i></button>
+    <button class="nb" onclick="tf()" title="ملء الشاشة"><i class="fas fa-expand"></i></button>
+</div>
+
+<script>
+const total=14; let cur=1;
+function ss(n){document.querySelectorAll('.slide').forEach(s=>s.classList.remove('active'));const s=document.getElementById('slide-'+n);if(s)s.classList.add('active');document.getElementById('sc').textContent=n+' / '+total;document.getElementById('pb').style.width=((n/total)*100)+'%';}
+function cs(d){cur=Math.max(1,Math.min(total,cur+d));ss(cur);}
+document.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowDown')cs(1);if(e.key==='ArrowRight'||e.key==='ArrowUp')cs(-1);if(e.key==='f'||e.key==='F')tf();});
+function tf(){if(!document.fullscreenElement)document.documentElement.requestFullscreen();else document.exitFullscreen();}
+let tx=0;document.addEventListener('touchstart',e=>{tx=e.changedTouches[0].screenX;});
+document.addEventListener('touchend',e=>{const d=tx-e.changedTouches[0].screenX;if(Math.abs(d)>50)cs(d>0?1:-1);});
+
+// Add slide IDs
+document.querySelectorAll('.slide').forEach((s,i)=>{s.id='slide-'+(i+1);});
+ss(1);
+</script>
+</body>
+</html>

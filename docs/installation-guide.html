@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>دليل التثبيت – رحّال</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{--beige:#D8C3A5;--brown:#6B4F3A;--olive:#78866B;--cream:#F7F3ED;--dark:#2F2F2F;--gold:#B08D57;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Tajawal',sans-serif;direction:rtl;background:var(--cream);color:var(--dark);line-height:1.8;}
+.hdr{background:linear-gradient(135deg,var(--brown),#3d2b1e);color:#fff;padding:50px 40px;text-align:center;}
+.hdr h1{font-size:2.5rem;font-weight:900;margin-bottom:8px;}
+.hdr p{opacity:.75;}
+.con{max-width:900px;margin:0 auto;padding:40px 20px;}
+.step{background:#fff;border-radius:14px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 12px rgba(107,79,58,.08);border-right:5px solid var(--gold);}
+.sn{width:44px;height:44px;background:var(--gold);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.1rem;flex-shrink:0;}
+.sh{display:flex;align-items:center;gap:16px;margin-bottom:16px;}
+.st{font-size:1.2rem;font-weight:800;color:var(--brown);}
+pre{background:var(--dark);color:#a8ff78;padding:16px 20px;border-radius:8px;font-size:13px;overflow-x:auto;margin:12px 0;direction:ltr;text-align:left;}
+table{width:100%;border-collapse:collapse;margin:12px 0;}
+th{background:var(--brown);color:#fff;padding:10px 14px;text-align:right;font-weight:700;}
+td{padding:10px 14px;border-bottom:1px solid var(--beige);}
+tr:nth-child(even) td{background:var(--cream);}
+.note{background:rgba(176,141,87,.1);border:1px solid rgba(176,141,87,.3);border-radius:8px;padding:14px 18px;margin:12px 0;font-size:14px;}
+.note i{color:var(--gold);margin-left:8px;}
+code{background:rgba(107,79,58,.08);padding:2px 6px;border-radius:4px;font-size:13px;}
+</style>
+</head>
+<body>
+<div class="hdr"><h1><i class="fas fa-tools ms-2"></i>دليل التثبيت</h1><p>منصة رحّال – خطوات التثبيت على XAMPP</p></div>
+<div class="con">
+
+<div class="step"><div class="sh"><div class="sn">1</div><div class="st">تحميل XAMPP</div></div>
+<p>تحميل XAMPP من: <code>https://www.apachefriends.org/download.html</code></p>
+<p>تأكد من تثبيت: ✅ Apache &nbsp; ✅ MySQL &nbsp; ✅ PHP 7.4+ &nbsp; ✅ phpMyAdmin</p>
+</div>
+
+<div class="step"><div class="sh"><div class="sn">2</div><div class="st">نسخ ملفات المشروع</div></div>
+<p>انسخ مجلد <code>rahhal</code> بالكامل إلى:</p>
+<pre>C:\xampp\htdocs\rahhal\</pre>
+<div class="note"><i class="fas fa-info-circle"></i>تأكد من أن <code>index.php</code> موجود مباشرة داخل مجلد rahhal</div>
+</div>
+
+<div class="step"><div class="sh"><div class="sn">3</div><div class="st">تشغيل XAMPP</div></div>
+<p>افتح XAMPP Control Panel واضغط <strong>Start</strong> بجانب <strong>Apache</strong> و <strong>MySQL</strong></p>
+</div>
+
+<div class="step"><div class="sh"><div class="sn">4</div><div class="st">إنشاء قاعدة البيانات</div></div>
+<p>افتح المتصفح: <code>http://localhost/phpmyadmin</code></p>
+<ol style="padding-right:20px;margin:12px 0;line-height:2.2;">
+<li>اضغط <strong>New</strong> من القائمة اليسرى</li>
+<li>اكتب الاسم: <code>rahhal_db</code></li>
+<li>اختر: <code>utf8mb4_unicode_ci</code></li>
+<li>اضغط <strong>Create</strong></li>
+</ol>
+</div>
+
+<div class="step"><div class="sh"><div class="sn">5</div><div class="st">استيراد قاعدة البيانات</div></div>
+<ol style="padding-right:20px;margin:12px 0;line-height:2.2;">
+<li>انقر على <code>rahhal_db</code> ثم تبويب <strong>Import</strong></li>
+<li>اختر الملف: <code>rahhal\database\rahhal_db.sql</code></li>
+<li>اضغط <strong>Go</strong></li>
+</ol>
+<div class="note"><i class="fas fa-check-circle"></i>ستظهر 5 جداول: admins, users, categories, experiences, bookings</div>
+</div>
+
+<div class="step"><div class="sh"><div class="sn">6</div><div class="st">تشغيل المشروع 🎉</div></div>
+<table>
+<thead><tr><th>الصفحة</th><th>الرابط</th></tr></thead>
+<tbody>
+<tr><td>الرئيسية</td><td><code>http://localhost/rahhal/</code></td></tr>
+<tr><td>تسجيل الدخول</td><td><code>http://localhost/rahhal/pages/login.php</code></td></tr>
+<tr><td>لوحة التحكم</td><td><code>http://localhost/rahhal/admin/login.php</code></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="step"><div class="sh"><div class="sn">7</div><div class="st">بيانات الدخول التجريبية</div></div>
+<table>
+<thead><tr><th>النوع</th><th>البريد / المستخدم</th><th>كلمة المرور</th></tr></thead>
+<tbody>
+<tr><td>مستخدم عادي</td><td>user@rahhal.sa</td><td>password</td></tr>
+<tr><td>مشرف (Admin)</td><td>admin</td><td>password</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="step"><div class="sh"><div class="sn" style="background:var(--olive);">!</div><div class="st">حل المشكلات الشائعة</div></div>
+<table>
+<thead><tr><th>المشكلة</th><th>الحل</th></tr></thead>
+<tbody>
+<tr><td>خطأ اتصال بقاعدة البيانات</td><td>تأكد من تشغيل MySQL وصحة بيانات connection.php</td></tr>
+<tr><td>صفحة فارغة / 404</td><td>تأكد من وضع المجلد في htdocs وتشغيل Apache</td></tr>
+<tr><td>مشكلة رفع الصور</td><td>تأكد من صلاحيات الكتابة على assets/images/</td></tr>
+</tbody>
+</table>
+</div>
+
+</div>
+<div style="background:var(--brown);color:#fff;text-align:center;padding:24px;"><p style="opacity:.75;font-size:14px;">© 2026 رحّال – دليل التثبيت v1.0</p></div>
+</body>
+</html>
