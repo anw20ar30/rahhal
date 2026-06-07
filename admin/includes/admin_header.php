@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="../assets/css/style.css?v=1780769327">
+<link rel="icon" type="image/png" href="../assets/images/logo.png">
 <style>
 @font-face{font-family:'ThmanyahSans';src:url('../assets/fonts/thmanyahsans-Regular.woff2') format('woff2');font-weight:400;font-display:swap;}
 @font-face{font-family:'ThmanyahSans';src:url('../assets/fonts/thmanyahsans-Medium.woff2') format('woff2');font-weight:500;font-display:swap;}
