@@ -1,21 +1,30 @@
 -- =====================================================
--- رحّال - قاعدة البيانات الكاملة
+-- رحّال — قاعدة البيانات (آخر تحديث)
 -- RAHHAL Hotel Experience Booking Platform
+-- Database: rahhal_db
 -- =====================================================
 
 CREATE DATABASE IF NOT EXISTS rahhal_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE rahhal_db;
 
--- جدول المشرفين
-CREATE TABLE IF NOT EXISTS admins (
+SET FOREIGN_KEY_CHECKS = 0;
+DROP TABLE IF EXISTS bookings;
+DROP TABLE IF EXISTS experiences;
+DROP TABLE IF EXISTS categories;
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS admins;
+SET FOREIGN_KEY_CHECKS = 1;
+
+-- ===================== المشرفون =====================
+CREATE TABLE admins (
     admin_id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(100) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- جدول المستخدمين
-CREATE TABLE IF NOT EXISTS users (
+-- ===================== المستخدمون =====================
+CREATE TABLE users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(100) NOT NULL,
     last_name VARCHAR(100) NOT NULL,
@@ -26,16 +35,16 @@ CREATE TABLE IF NOT EXISTS users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- جدول الفئات
-CREATE TABLE IF NOT EXISTS categories (
+-- ===================== الفئات =====================
+CREATE TABLE categories (
     category_id INT AUTO_INCREMENT PRIMARY KEY,
     category_name VARCHAR(200) NOT NULL,
     category_icon VARCHAR(100) DEFAULT 'fas fa-hotel',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- جدول التجارب
-CREATE TABLE IF NOT EXISTS experiences (
+-- ===================== التجارب =====================
+CREATE TABLE experiences (
     experience_id INT AUTO_INCREMENT PRIMARY KEY,
     category_id INT NOT NULL,
     title VARCHAR(300) NOT NULL,
@@ -52,8 +61,8 @@ CREATE TABLE IF NOT EXISTS experiences (
     FOREIGN KEY (category_id) REFERENCES categories(category_id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- جدول الحجوزات
-CREATE TABLE IF NOT EXISTS bookings (
+-- ===================== الحجوزات =====================
+CREATE TABLE bookings (
     booking_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
     experience_id INT NOT NULL,
@@ -67,41 +76,49 @@ CREATE TABLE IF NOT EXISTS bookings (
     FOREIGN KEY (experience_id) REFERENCES experiences(experience_id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Contact form messages
-CREATE TABLE IF NOT EXISTS contact_messages (
-    message_id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(150) NOT NULL,
-    email VARCHAR(255) NOT NULL,
-    subject VARCHAR(200),
-    message TEXT NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+-- ===================== بيانات الفئات =====================
+INSERT INTO categories (category_id, category_name, category_icon) VALUES
+(1,'المنتجعات الفاخرة','fas fa-crown'),
+(2,'الفنادق التراثية','fas fa-landmark'),
+(3,'المنتجعات الشاطئية','fas fa-umbrella-beach'),
+(4,'الإقامات الجبلية','fas fa-mountain'),
+(5,'المنتجعات العائلية','fas fa-home'),
+(6,'تجارب شهر العسل','fas fa-heart'),
+(7,'المخيمات الصحراوية','fas fa-campground'),
+(8,'منتجعات الصحة والعافية','fas fa-spa'),
+(9,'الفنادق البوتيكية','fas fa-hotel'),
+(10,'المنتجعات البيئية','fas fa-leaf');
 
--- البيانات الأولية: الفئات
-INSERT INTO categories (category_name, category_icon) VALUES
-('المنتجعات الفاخرة', 'fas fa-crown'),
-('الفنادق التراثية', 'fas fa-landmark'),
-('المنتجعات الشاطئية', 'fas fa-umbrella-beach'),
-('الإقامات الجبلية', 'fas fa-mountain'),
-('المنتجعات العائلية', 'fas fa-home'),
-('تجارب شهر العسل', 'fas fa-heart'),
-('المخيمات الصحراوية', 'fas fa-campground'),
-('منتجعات الصحة والعافية', 'fas fa-spa'),
-('الفنادق البوتيكية', 'fas fa-hotel'),
-('المنتجعات البيئية', 'fas fa-leaf');
-
--- المشرف الافتراضي (كلمة المرور: password)
+-- ===================== المشرف الافتراضي =====================
+-- اسم المستخدم: admin | كلمة المرور: password
 INSERT INTO admins (username, password) VALUES
 ('admin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi');
 
--- البيانات التجريبية: التجارب
-INSERT INTO experiences (category_id, title, hotel_name, description, city, address, image, price_per_night, rating, available_rooms, is_featured) VALUES
-(1, 'الاندماج الكامل مع الجبل', 'Desert Rock Resort', 'فيلات محفورة داخل الجبال الصخرية، وواحدة من أكثر المشاريع المعمارية جرأة في الشرق الأوسط. تجربة تشبه منتجعات الخيال العلمي وسط الطبيعة الصحراوية الساحرة، حيث تندمج الإقامة بالكامل مع تكوينات الجبال الصخرية.', 'نيوم', 'محمية البحر الأحمر، نيوم، المملكة العربية السعودية', 'desert-rock.jpg', 4500.00, 5.0, 6, 1),
-(9, 'النوم داخل فندق من الجليد', 'ICEHOTEL', 'فندق يُعاد بناؤه من الثلج والجليد كل عام، وكل جناح يُصمم كعمل فني مختلف بأيدي نحاتين عالميين. من أكثر تجارب الإقامة غرابة وتميزاً على مستوى العالم، حيث تنام محاطاً بجدران وأثاث منحوت بالكامل من الجليد.', 'السويد', 'يوكاسيارفي، السويد', 'icehotel.jpg', 3200.00, 4.8, 8, 1),
-(3, 'جناح تحت سطح البحر', 'Conrad Maldives Rangali Island', 'جناح "Muraka" الذي يضع غرفة النوم تحت الماء مباشرة، حيث يمكنك مشاهدة الأسماك والشعاب المرجانية الملونة من سريرك. من أكثر تجارب الفنادق ندرة وفخامة في العالم، تجمع بين الرفاهية المطلقة وسحر أعماق المحيط الهندي.', 'المالديف', 'جزيرة رانغالي، جنوب أتول آري، المالديف', 'conrad-maldives.jpg', 9800.00, 5.0, 3, 1),
-(10, 'منازل معلقة بين الأشجار', 'Treehotel', 'غرف على شكل مكعب مرآة أو عش طائر معلقة بين الأشجار، تقدم تجربة معمارية فريدة وسط الغابات الشمالية الهادئة. مناسب تماماً لمحبي الطبيعة والتصميم المبتكر، حيث تستيقظ على أصوات الغابة وإطلالات الأشجار الشاهقة.', 'السويد', 'هارادس، شمال السويد', 'treehotel.jpg', 2700.00, 4.9, 7, 1),
-(9, 'فندق عائم داخل سفينة تاريخية', 'Fingal Hotel', 'سفينة تاريخية تحولت إلى فندق فاخر عائم، تقدم تجربة بحرية مختلفة تماماً عن الفنادق التقليدية. صُنّف ضمن أبرز الفنادق الفريدة عالمياً، ويجمع بين عراقة التاريخ البحري والرفاهية العصرية على ضفاف ميناء إدنبرة.', 'إدنبرة', 'ميناء ليث، إدنبرة، اسكتلندا', 'fingal-hotel.jpg', 3600.00, 4.7, 5, 1);
-
--- مستخدم تجريبي (كلمة المرور: password)
+-- ===================== مستخدم تجريبي =====================
+-- البريد: user@rahhal.sa | كلمة المرور: password
 INSERT INTO users (first_name, last_name, email, password, address, mobile) VALUES
 ('أحمد', 'السعودي', 'user@rahhal.sa', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'الرياض، حي النخيل', '0501234567');
+
+-- ===================== التجارب الفريدة (5) =====================
+INSERT INTO experiences
+(experience_id, category_id, title, hotel_name, description, city, address, image, price_per_night, rating, available_rooms, is_featured)
+VALUES
+(11, 1, 'الاندماج الكامل مع الجبل', 'Desert Rock Resort',
+ 'فيلات محفورة داخل الجبال الصخرية.\nواحدة من أكثر المشاريع المعمارية جرأة في الشرق الأوسط.\nتجربة تشبه منتجعات الخيال العلمي وسط الطبيعة الصحراوية.',
+ 'نيوم', 'محمية البحر الأحمر، نيوم، المملكة العربية السعودية', 'desert-rock.jpg', 4500.00, 5.0, 6, 1),
+
+(12, 9, 'النوم داخل فندق من الجليد', 'ICEHOTEL',
+ 'يُعاد بناؤه من الثلج والجليد كل عام.\nكل جناح يُصمم كعمل فني مختلف.\nمن أكثر تجارب الإقامة غرابة على مستوى العالم.',
+ 'السويد', 'يوكاسيارفي، السويد', 'icehotel.jpg', 3200.00, 4.8, 8, 1),
+
+(13, 3, 'جناح تحت سطح البحر', 'Conrad Maldives Rangali Island',
+ 'جناح "Muraka" يضع غرفة النوم تحت الماء.\nيمكنك مشاهدة الأسماك والشعاب المرجانية من سريرك.\nمن أكثر تجارب الفنادق ندرة وفخامة.',
+ 'المالديف', 'جزيرة رانغالي، جنوب أتول آري، المالديف', 'conrad-maldives.jpg', 9800.00, 5.0, 3, 1),
+
+(14, 10, 'منازل معلقة بين الأشجار', 'Treehotel',
+ 'غرف على شكل مكعب مرآة أو عش طائر.\nتجربة معمارية وسط الغابات الشمالية.\nمناسب لمحبي الطبيعة والتصميم.',
+ 'السويد', 'هارادس، شمال السويد', 'treehotel.jpg', 2700.00, 4.9, 7, 1),
+
+(15, 9, 'فندق عائم داخل سفينة تاريخية', 'Fingal Hotel',
+ 'سفينة تاريخية تحولت إلى فندق فاخر.\nتجربة بحرية مختلفة عن الفنادق التقليدية.\nصُنّف ضمن أبرز الفنادق الفريدة عالمياً.',
+ 'إدنبرة', 'ميناء ليث، إدنبرة، اسكتلندا', 'fingal-hotel.jpg', 3600.00, 4.7, 5, 1);
