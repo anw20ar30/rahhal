@@ -5,7 +5,7 @@
 define('DB_HOST', 'mysql.railway.internal');
 define('DB_USER', 'root');
 define('DB_PASS', 'FqUOVLFTEMdZftUQoNkGuPgGGWfvytNR');
-define('DB_NAME', 'rahhal_db');
+define('DB_NAME', 'railway');
 define('DB_PORT', 3306);
 
 $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
